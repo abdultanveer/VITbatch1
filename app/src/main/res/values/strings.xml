@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VIT batch1</string>
+    <string name="hint_entername">enter your name</string>
+    <string name="hint_enterpin">enter pin</string>
 </resources>
