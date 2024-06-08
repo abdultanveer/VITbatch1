@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
         android:text="login"
+        android:onClick="clickHandler"
         android:textColor="@android:color/holo_blue_light"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
