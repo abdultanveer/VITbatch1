@@ -47,7 +47,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
-        android:text="login"
+        android:text="@string/login_label"
         android:onClick="clickHandler"
         android:textColor="@android:color/holo_blue_light"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"

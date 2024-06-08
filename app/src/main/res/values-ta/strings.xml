@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_entername">உங்கள் பெயரை உள்ளிடவும்</string>
+    <string name="hint_enterpin">பின்னை உள்ளிடவும்</string>
+</resources>
