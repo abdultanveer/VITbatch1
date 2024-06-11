@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(webIntent)*/
 
         var hIntent:Intent = Intent(this,HomeActivity::class.java)
+        hIntent.putExtra("mykey","android-vit-abdul")
         startActivity(hIntent)
     }
 }
