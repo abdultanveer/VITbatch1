@@ -6,11 +6,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.vitbatch1.kotlinexs.Employee
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+       // var myEmp = Employee("abdul")
+
+
+
     }
 
     fun clickHandler(view: View) {
