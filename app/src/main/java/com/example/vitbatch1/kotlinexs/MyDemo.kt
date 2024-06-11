@@ -1,7 +1,6 @@
 package com.example.vitbatch1.kotlinexs
 
-import com.example.vitbatch2.Employee
-import com.example.vitbatch2.Student
+
 
 fun main() {
    var someLamda : (Int,Int) -> Int = {a:Int,b:Int -> a+b}
