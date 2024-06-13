@@ -86,7 +86,6 @@ class MainActivity : AppCompatActivity() {
         add(10,20)
     }
 
-
     fun inflateXml(){
         var nameEditText = EditText(this)
         nameEditText.setHint("enter ur name")
