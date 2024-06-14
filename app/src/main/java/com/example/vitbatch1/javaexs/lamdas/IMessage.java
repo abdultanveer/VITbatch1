@@ -1,4 +1,4 @@
-package com.example.vitbatch1.javaexs;
+package com.example.vitbatch1.javaexs.lamdas;
 
 //sam , marker,
 public interface IMessage {

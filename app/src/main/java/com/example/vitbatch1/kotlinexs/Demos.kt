@@ -1,6 +1,11 @@
 package com.example.vitbatch1.kotlinexs
 
 fun main() {
+    val s = Square(10)
+
+    var name:String = "abdul"
+    println(name.commaSeperated("some other string"))
+
     for (i in 1..5) print(i)
 
     printHello("hello")
@@ -28,4 +33,15 @@ fun drive(speed: String = "fast") {   //speed = param
 
 fun tempToday(day: String, temp: Int) {
     println("Today is $day and it's $temp degrees.")
+}
+
+fun String.commaSeperated( values:String):String{
+  return  "comma seperated string --"+ values
+
+}
+
+class Square(val side: Int) {
+    init {
+        println(side * 2)
+    }
 }
