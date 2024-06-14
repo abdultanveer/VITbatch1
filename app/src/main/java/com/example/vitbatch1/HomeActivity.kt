@@ -4,18 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ListView
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
 
 class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-    var data = arrayOf("india","hindi","australia","peacock","blue")
+    var dataArray = arrayOf("india","hindi","australia","peacock","blue")
     var TAG = HomeActivity::class.java.simpleName    //"HomeActivity"
     lateinit var mySpinner: Spinner
     lateinit var myRecycler: RecyclerView
@@ -25,6 +23,9 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_home)
         mySpinner = findViewById(R.id.spinner) //taking handle
         myRecycler = findViewById(R.id.recyclerView)
+        myRecycler.layoutManager = LinearLayoutManager(this)
+        var wordsAdapter = WordsAdapter(dataArray)
+        myRecycler.adapter = wordsAdapter
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
