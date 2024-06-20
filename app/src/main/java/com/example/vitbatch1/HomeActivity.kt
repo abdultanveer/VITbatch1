@@ -57,7 +57,6 @@ class HomeActivity : AppCompatActivity(){
            // photos = listMarsPhotos
             marsAdapter.listMarsPhotos = listMarsPhotos
             //import coil.load
-            imageView.load(listMarsPhotos.get(0).imgSrc)
             marsAdapter.notifyDataSetChanged()
          //   var tvHome:TextView = findViewById(R.id.tvHome)
 //            tvHome.setText(listMarsPhotos.get(1).imgSrc)
