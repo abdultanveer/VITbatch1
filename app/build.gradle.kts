@@ -55,4 +55,9 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     // Kotlin serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
+    implementation ("com.squareup.moshi:moshi-kotlin:1.13.0")
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+    implementation ("io.coil-kt:coil:1.1.1")
 }
