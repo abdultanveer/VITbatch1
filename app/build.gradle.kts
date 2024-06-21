@@ -1,12 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+
 }
 
 android {
     namespace = "com.example.vitbatch1"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.vitbatch1"
         minSdk = 24
@@ -36,6 +41,10 @@ android {
 }
 
 dependencies {
+    //room dependencies
+    implementation("androidx.room:room-common:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
+    kapt ("androidx.room:room-compiler:2.6.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
