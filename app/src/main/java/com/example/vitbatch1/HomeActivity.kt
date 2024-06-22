@@ -15,7 +15,12 @@ import com.example.vitbatch1.database.Item
 import com.example.vitbatch1.database.ItemDao
 import com.example.vitbatch1.database.ItemRoomDatabase
 import com.example.vitbatch1.databinding.ActivityHomeBinding
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.last
+import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.launch
 
 class HomeActivity : AppCompatActivity() {
@@ -34,6 +39,17 @@ class HomeActivity : AppCompatActivity() {
 
         binding.btnDbInsert.setOnClickListener{
             insertDataDb()
+        }
+
+        binding.btnFind.setOnClickListener{
+            findItemDb(21)
+        }
+    }
+
+    private fun findItemDb(id: Int) {
+        GlobalScope.launch(Dispatchers.Main) {
+            var item = dao.getItem(id).first()
+           binding.tvHome.setText(item.itemName)
         }
     }
 
